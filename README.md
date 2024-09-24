@@ -1,2 +1,2 @@
-# MyPortfolioVertionWebsite
+# MyPortfolioVersionWebsite
  Welcome to my project!
