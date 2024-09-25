@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    min-height: 100vh;
+    background:#76a283;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media (min-width:1024px){
+    .container{
+        width: 80vw;
+        height: 100vh;
+        /* background-color: red; */
+        padding:12vh 0 0 0;
+        margin-left: 10vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .container div{
+        margin:2vh 2vw 2vh 2vw ;
+        padding: 2%;
+        padding-left: 5%;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px #000000;
+        border-radius: 50px;
+        border: solid 5px #ffffff;
+        box-shadow :0px 0px 10px #ffffff;
+        background: #76a283;
+        animation: animate 3s;
+    }
+}
+
+@media (min-width:320px) and (max-width:1023px){
+
+    .container{
+        width: 80vw;
+        /* background-color: red; */
+        padding:80px 0 0 10vw;
+    }
+
+    .container div{
+        margin:2vh 0 ;
+        padding: 20px;
+        padding-left: 5%;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px #000000;
+        border-radius: 50px;
+        border: solid 5px #ffffff;
+        box-shadow :0px 0px 10px #ffffff;
+        background: #76a283;
+        width: 80vw;
+        animation:appear 5s linear;
+        animation-timeline: view();
+        animation-range: entry 0 ;
+    }
+}
+
+
+.container div h1{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+@keyframes animate{
+
+    0%{
+        /* transform: scale(0); */
+        opacity:0;
+    }
+    100%{
+        /* transform:  scale(100%); */
+        opacity:1;
+    }
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
